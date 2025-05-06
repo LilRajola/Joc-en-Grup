@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3eoxcw58e42n"
+path="res://.godot/imported/sfx_lose.ogg-1ea83c61170b7a634abd2e89ff470aaf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Imatges/Naus i meteorits/Bonus/sfx_lose.ogg"
+dest_files=["res://.godot/imported/sfx_lose.ogg-1ea83c61170b7a634abd2e89ff470aaf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

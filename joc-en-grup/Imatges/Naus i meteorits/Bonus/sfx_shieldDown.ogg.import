@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0vgj1ph5hq5y"
+path="res://.godot/imported/sfx_shieldDown.ogg-d01cfa800aa48fc6e7ca7a93d1f5c253.oggvorbisstr"
+
+[deps]
+
+source_file="res://Imatges/Naus i meteorits/Bonus/sfx_shieldDown.ogg"
+dest_files=["res://.godot/imported/sfx_shieldDown.ogg-d01cfa800aa48fc6e7ca7a93d1f5c253.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

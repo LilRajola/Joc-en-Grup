@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cikyxovafyxsg"
+path="res://.godot/imported/sfx_laser1.ogg-f97b19eacc6584910db96f2133137baf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Imatges/Naus i meteorits/Bonus/sfx_laser1.ogg"
+dest_files=["res://.godot/imported/sfx_laser1.ogg-f97b19eacc6584910db96f2133137baf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
