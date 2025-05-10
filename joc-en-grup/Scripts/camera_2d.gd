@@ -5,5 +5,5 @@ func _process(delta: float) -> void:
 	var direction := Vector2.ZERO
 	
 	
-	direction.x += -1
+	direction.x += 1
 	position += direction * speed * delta
