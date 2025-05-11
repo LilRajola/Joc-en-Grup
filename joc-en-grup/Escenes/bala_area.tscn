@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhaw0w05df4yd"]
+
+[ext_resource type="Script" uid="uid://c1cdq0sxc7k6r" path="res://Scripts/moviment_bala.gd" id="1_r1nu7"]
+[ext_resource type="Texture2D" uid="uid://b6upfc05k8f8q" path="res://Imatges/Naus i meteorits/PNG/Lasers/laserBlue01.png" id="2_1qau5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_co1se"]
+size = Vector2(27, 4)
+
+[node name="Bala" type="Area2D"]
+script = ExtResource("1_r1nu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1qau5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_co1se")

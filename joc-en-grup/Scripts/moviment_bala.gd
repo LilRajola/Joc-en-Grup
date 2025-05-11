@@ -1,4 +1,8 @@
-extends Node
+extends Area2D
+var velocitat_bala = 1000
 
 func _process(delta: float) -> void:
-	velocity.x = 400
+	position.x += velocitat_bala * delta
+	
+	
+	
