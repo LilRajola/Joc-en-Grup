@@ -10,9 +10,11 @@ func _process(delta: float) -> void:
 	
 	# Per a las balas
 	var shoot = bala.instantiate()
+	
 	if Input.is_action_just_pressed("Disparar"):
 		shoot.position = position + Vector2(50,0)  # Fa que la bala surti del jugador
 		get_parent().add_child(shoot)
+		
 		
 	
 	move_and_slide()

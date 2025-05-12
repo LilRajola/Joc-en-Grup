@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwm8qusxlxxxb"]
+[gd_scene load_steps=7 format=3 uid="uid://cwm8qusxlxxxb"]
 
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_cfupu"]
 [ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="3_3vjej"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="4_4egp3"]
-[ext_resource type="PackedScene" uid="uid://cjpgkbmnq2qog" path="res://Escenes/enemic.tscn" id="4_i63ma"]
+[ext_resource type="PackedScene" uid="uid://l7y7dxh75jxj" path="res://Escenes/path_2d.tscn" id="4_i63ma"]
+[ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="5_i63ma"]
 
 [sub_resource type="GDScript" id="GDScript_3vjej"]
 script/source = "extends Node
@@ -27,5 +28,8 @@ script = ExtResource("2_cfupu")
 [node name="Nau" parent="." instance=ExtResource("4_4egp3")]
 position = Vector2(-270, 0)
 
-[node name="Enemic" parent="." instance=ExtResource("4_i63ma")]
-position = Vector2(302, -159)
+[node name="Path2D" parent="." instance=ExtResource("4_i63ma")]
+position = Vector2(290, -155)
+
+[node name="Enemic" parent="." instance=ExtResource("5_i63ma")]
+position = Vector2(255, -157)
