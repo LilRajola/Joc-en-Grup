@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ftrwthew8s3x"]
+
+[ext_resource type="Script" uid="uid://0uldbjbs8a7v" path="res://Scripts/bala_enemiga.gd" id="1_56o0t"]
+[ext_resource type="Texture2D" uid="uid://g1g5vvi5vk5t" path="res://Imatges/Naus i meteorits/PNG/Lasers/laserRed01.png" id="2_nydlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbh0s"]
+size = Vector2(27, 4)
+
+[node name="Bala_enemiga" type="Area2D"]
+script = ExtResource("1_56o0t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nydlu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_wbh0s")
