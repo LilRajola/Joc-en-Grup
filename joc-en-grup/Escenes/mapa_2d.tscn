@@ -34,3 +34,12 @@ script = ExtResource("4_i63ma")
 escena_enemic = ExtResource("5_i63ma")
 
 [node name="Timer" type="Timer" parent="Enemics"]
+
+[node name="Enemic" parent="." instance=ExtResource("5_i63ma")]
+position = Vector2(281, -154)
+
+[node name="Enemic2" parent="." instance=ExtResource("5_i63ma")]
+position = Vector2(246, -154)
+
+[node name="Enemic3" parent="." instance=ExtResource("5_i63ma")]
+position = Vector2(206, -152)
