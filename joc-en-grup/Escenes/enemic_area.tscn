@@ -13,7 +13,6 @@ _data = {
 point_count = 3
 
 [node name="Enemic" type="Area2D"]
-collision_layer = 2
 script = ExtResource("1_oikqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ncmptakgoend"]
+
+[ext_resource type="PackedScene" uid="uid://dhaw0w05df4yd" path="res://Escenes/bala_area.tscn" id="1_b8ro3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jftrc"]
+radius = 124.145
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(424, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jftrc")
+
+[node name="Bala" parent="." instance=ExtResource("1_b8ro3")]
