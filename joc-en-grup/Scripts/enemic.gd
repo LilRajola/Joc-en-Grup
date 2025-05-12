@@ -1,6 +1,6 @@
 extends Area2D
 
-var velocitat := 150
+var velocitat := 250
 @onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
 
 

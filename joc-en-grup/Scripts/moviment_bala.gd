@@ -8,7 +8,6 @@ func _process(delta: float) -> void:
 	
 
 func _on_area_entered(area: Area2D) -> void:
-	print("xoc")
 	area.queue_free()
 	queue_free()
 	
