@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwm8qusxlxxxb"]
+[gd_scene load_steps=10 format=3 uid="uid://cwm8qusxlxxxb"]
 
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_cfupu"]
 [ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="3_3vjej"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="4_4egp3"]
 [ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="4_i63ma"]
 [ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="5_i63ma"]
+[ext_resource type="Texture2D" uid="uid://mwuc4c1w63j4" path="res://Imatges/Fons menu/ON.png" id="6_q54v5"]
+[ext_resource type="Texture2D" uid="uid://cnhvl11lgd4vt" path="res://Imatges/Fons menu/OFF_SMALL.png" id="7_2adt0"]
+[ext_resource type="Script" uid="uid://dinmndix8nipv" path="res://Scripts/Audio.gd" id="8_2adt0"]
 
 [sub_resource type="GDScript" id="GDScript_3vjej"]
 script/source = "extends Node
@@ -35,3 +38,13 @@ escena_enemic = ExtResource("5_i63ma")
 
 [node name="Timer" type="Timer" parent="Enemics"]
 autostart = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -317.0
+offset_top = -177.0
+offset_right = -267.0
+offset_bottom = -127.0
+toggle_mode = true
+texture_normal = ExtResource("6_q54v5")
+texture_pressed = ExtResource("7_2adt0")
+script = ExtResource("8_2adt0")
