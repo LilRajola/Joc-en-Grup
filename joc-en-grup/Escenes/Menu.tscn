@@ -1,25 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1xa7o03w1ac7"]
+[gd_scene load_steps=9 format=3 uid="uid://35t24tmpo3k7"]
 
 [ext_resource type="Texture2D" uid="uid://bbrjppslcdj23" path="res://Imatges/Fons menu/nebulawetstars.png" id="1_eintn"]
+[ext_resource type="Texture2D" uid="uid://b3yes6lwv62mj" path="res://Imatges/Fons menu/Audio.png" id="2_5ywoj"]
 [ext_resource type="Script" uid="uid://cg3jubv6q7d0i" path="res://Scripts/menu.gd" id="2_jru0a"]
-[ext_resource type="Script" uid="uid://u8v2d04plybd" path="res://Scripts/Estrelles.gd" id="2_uos6n"]
-[ext_resource type="Script" uid="uid://cbf1kjh0we1n3" path="res://Scripts/SmallEstrelles.gd" id="4_eintn"]
+[ext_resource type="Script" path="res://Scripts/Estrelles.gd" id="2_uos6n"]
+[ext_resource type="Texture2D" uid="uid://dkj8hqw5krbij" path="res://Imatges/Fons menu/AudioOFF.png" id="3_akq0s"]
+[ext_resource type="Script" path="res://Scripts/SmallEstrelles.gd" id="4_eintn"]
 [ext_resource type="Texture2D" uid="uid://b7tgxfu7srjd8" path="res://Imatges/Fons menu/nebuladrystars.png" id="4_fl60i"]
+[ext_resource type="AudioStream" uid="uid://cfwhevuwwi7dx" path="res://Audio/interstellar_piano.mp3" id="6_1l38a"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("2_jru0a")
-
-[node name="Nebulawetstars" type="Sprite2D" parent="."]
-position = Vector2(576.5, 324.5)
-scale = Vector2(0.281494, 0.158447)
-texture = ExtResource("1_eintn")
-script = ExtResource("2_uos6n")
-
-[node name="Nebuladrystars" type="Sprite2D" parent="."]
-position = Vector2(576.5, 324.5)
-scale = Vector2(0.281494, 0.158447)
-texture = ExtResource("4_fl60i")
-script = ExtResource("4_eintn")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 476.0
@@ -29,4 +20,28 @@ offset_bottom = 284.0
 theme_override_font_sizes/font_size = 50
 text = "Play"
 
+[node name="Nebuladrystars" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324.5)
+scale = Vector2(0.281494, 0.158447)
+texture = ExtResource("4_fl60i")
+script = ExtResource("4_eintn")
+
+[node name="Nebulawetstars" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324.5)
+scale = Vector2(0.281494, 0.158447)
+texture = ExtResource("1_eintn")
+script = ExtResource("2_uos6n")
+
+[node name="Audio" type="TextureButton" parent="."]
+offset_right = 149.0
+offset_bottom = 156.0
+toggle_mode = true
+texture_normal = ExtResource("2_5ywoj")
+texture_pressed = ExtResource("3_akq0s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("6_1l38a")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]
+[connection signal="finished" from="Audio/AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
