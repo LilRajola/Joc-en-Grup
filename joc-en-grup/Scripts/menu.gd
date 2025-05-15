@@ -2,7 +2,7 @@ extends Node2D
 
 var ON := true
 func _ready():
-	#$Audio/AudioStreamPlayer.play()
+	$Audio/AudioStreamPlayer.play()
 	pass
 func _on_tutorial_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenes/Tutorial.tscn")

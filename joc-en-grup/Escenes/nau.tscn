@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://buvopjkuiuum6" path="res://Scripts/nau_jugador_moviment.gd" id="1_5806m"]
 [ext_resource type="Texture2D" uid="uid://dnernhjmnbum0" path="res://Imatges/Naus i meteorits/PNG/playerShip1_blue.png" id="1_urhgp"]
 [ext_resource type="AudioStream" uid="uid://qlaelqvc7wyd" path="res://Audio/mixkit-short-laser-gun-shot-1670.wav" id="3_4fit1"]
-[ext_resource type="Script" uid="uid://bkg1m40w8k171" path="res://Scripts/salut.gd" id="4_w4cpf"]
+[ext_resource type="Script" path="res://Scripts/salut.gd" id="4_w4cpf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5806m"]
 radius = 20.025

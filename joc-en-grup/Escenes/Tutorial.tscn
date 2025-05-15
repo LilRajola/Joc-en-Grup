@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwm8qusxlxxxb"]
+[gd_scene load_steps=8 format=3 uid="uid://cwm8qusxlxxxb"]
 
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_i2ep7"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="3_2a6fk"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="5_2ottu"]
 [ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="6_frtpr"]
 [ext_resource type="PackedScene" uid="uid://bn3iiuyoxabm2" path="res://Escenes/intruccions_tutorial.tscn" id="7_i2ep7"]
+
+[sub_resource type="Theme" id="Theme_2a6fk"]
 
 [node name="Tutorial" type="Node2D"]
 
@@ -21,6 +23,7 @@ offset_left = -34.0
 offset_top = 145.0
 offset_right = 237.0
 offset_bottom = 168.0
+theme = SubResource("Theme_2a6fk")
 
 [node name="Fons" parent="." instance=ExtResource("4_0f7ro")]
 

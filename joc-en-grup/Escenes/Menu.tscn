@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://35t24tmpo3k7"]
+[gd_scene load_steps=10 format=3 uid="uid://35t24tmpo3k7"]
 
 [ext_resource type="Texture2D" uid="uid://bbrjppslcdj23" path="res://Imatges/Fons menu/nebulawetstars.png" id="1_eintn"]
 [ext_resource type="Script" uid="uid://cg3jubv6q7d0i" path="res://Scripts/menu.gd" id="2_jru0a"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tgxfu7srjd8" path="res://Imatges/Fons menu/nebuladrystars.png" id="4_fl60i"]
 [ext_resource type="AudioStream" uid="uid://cfwhevuwwi7dx" path="res://Audio/interstellar_piano.mp3" id="6_1l38a"]
 [ext_resource type="Texture2D" uid="uid://mwuc4c1w63j4" path="res://Imatges/Fons menu/ON.png" id="6_5ywoj"]
+[ext_resource type="FontFile" uid="uid://db765nebstfct" path="res://Fonts/Miskan Oblique.ttf" id="6_akq0s"]
 [ext_resource type="Texture2D" uid="uid://cnhvl11lgd4vt" path="res://Imatges/Fons menu/OFF_SMALL.png" id="6_fl60i"]
 
 [node name="Node2D" type="Node2D"]
@@ -29,6 +30,7 @@ offset_left = 486.0
 offset_top = 249.0
 offset_right = 679.0
 offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("6_akq0s")
 theme_override_font_sizes/font_size = 50
 text = "Play"
 
@@ -37,6 +39,7 @@ offset_left = 522.0
 offset_top = 360.0
 offset_right = 632.0
 offset_bottom = 411.0
+theme_override_fonts/font = ExtResource("6_akq0s")
 theme_override_font_sizes/font_size = 25
 text = "Tutorial
 "

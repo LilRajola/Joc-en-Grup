@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn3iiuyoxabm2"]
+[gd_scene load_steps=3 format=3 uid="uid://bn3iiuyoxabm2"]
 
+[ext_resource type="FontFile" uid="uid://db765nebstfct" path="res://Fonts/Miskan Oblique.ttf" id="1_dlohk"]
 [ext_resource type="Script" uid="uid://b13u5t4gqh26y" path="res://Scripts/intruccions_tutorial.gd" id="1_gwcil"]
 
 [node name="Intruccions_tutorial" type="Label"]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_dlohk")
 text = "Ei Mestre, benvingut a Galactics SL."
 script = ExtResource("1_gwcil")
 
