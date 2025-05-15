@@ -17,5 +17,3 @@ texture = ExtResource("2_nydlu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_wbh0s")
-
-[node name="Camera2D" type="Camera2D" parent="."]

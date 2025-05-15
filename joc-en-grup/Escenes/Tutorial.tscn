@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwm8qusxlxxxb"]
+
+[ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_i2ep7"]
+[ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="3_2a6fk"]
+[ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="4_0f7ro"]
+[ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="5_2ottu"]
+[ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="6_frtpr"]
+[ext_resource type="PackedScene" uid="uid://bn3iiuyoxabm2" path="res://Escenes/intruccions_tutorial.tscn" id="7_i2ep7"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.8, 1.8)
+script = ExtResource("2_i2ep7")
+
+[node name="Nau" parent="." instance=ExtResource("3_2a6fk")]
+position = Vector2(-270, 0)
+
+[node name="Intruccions_tutorial" parent="Nau" instance=ExtResource("7_i2ep7")]
+offset_left = -34.0
+offset_top = 145.0
+offset_right = 237.0
+offset_bottom = 168.0
+
+[node name="Fons" parent="." instance=ExtResource("4_0f7ro")]
+
+[node name="Enemics" type="Node2D" parent="."]
+position = Vector2(286, 0)
+script = ExtResource("5_2ottu")
+escena_enemic = ExtResource("6_frtpr")
+
+[node name="Timer" type="Timer" parent="Enemics"]
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Timer" type="Timer" parent="."]
