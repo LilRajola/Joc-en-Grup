@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://6dlnytr2gjny"]
+
+[ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="1_iqto5"]
+[ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="2_gw7rl"]
+
+[node name="Creació_enemics" type="Node2D"]
+script = ExtResource("1_iqto5")
+escena_enemic = ExtResource("2_gw7rl")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
