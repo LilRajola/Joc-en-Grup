@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwm8qusxlxxxb"]
+[gd_scene load_steps=9 format=3 uid="uid://cwm8qusxlxxxb"]
 
 [ext_resource type="Script" uid="uid://cb25e26w27t5i" path="res://Scripts/tutorial.gd" id="1_i2ep7"]
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_i2ep7"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="3_2a6fk"]
 [ext_resource type="FontFile" uid="uid://dxpf8sgnud44c" path="res://Fonts/Miskan Oblique.otf" id="4_2a6fk"]
+[ext_resource type="PackedScene" uid="uid://6dlnytr2gjny" path="res://Escenes/creació_enemics.tscn" id="7_2a6fk"]
 [ext_resource type="PackedScene" uid="uid://bn3iiuyoxabm2" path="res://Escenes/intruccions_tutorial.tscn" id="7_i2ep7"]
 [ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="8_2a6fk"]
 
@@ -39,6 +40,9 @@ position = Vector2(-270, 0)
 one_shot = true
 autostart = true
 
+[node name="Creació_enemics" parent="." instance=ExtResource("7_2a6fk")]
+
 [node name="Fons" parent="." instance=ExtResource("8_2a6fk")]
 
 [connection signal="pressed" from="Camera2D/Nivell" to="." method="_on_nivell_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

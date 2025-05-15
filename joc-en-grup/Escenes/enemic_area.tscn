@@ -8,7 +8,7 @@ size = Vector2(20, 26)
 
 [sub_resource type="Curve2D" id="Curve2D_a2166"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 0, 0, 0, 0, 0, 137, 334, 0, 0, 0, 0, 0, 334, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 0, 0, 0, 0, 0, 140, 302, 0, 0, 0, 0, 1, 301, 0, 0, 0, 0, 0, 0)
 }
 point_count = 5
 

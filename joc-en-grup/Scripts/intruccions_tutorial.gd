@@ -5,7 +5,7 @@ extends Label
 var missatges = 0
 
 func _ready() -> void:
-	timer_global.wait_time = 6
+	timer_global.wait_time = 5
 	timer_global.one_shot = false
 	timer_global.autostart = true
 	timer_global.timeout.connect(_on_timer_timeout)
