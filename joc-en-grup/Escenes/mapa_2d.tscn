@@ -1,51 +1,23 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwm8qusxlxxxb"]
+[gd_scene load_steps=7 format=3 uid="uid://cwm8qusxlxxxb"]
 
-[ext_resource type="Texture2D" uid="uid://35817g7gbslq" path="res://Imatges/Fons menu/ON (1).png" id="2_2adt0"]
+[ext_resource type="Script" uid="uid://c3b0ymo0k7e0s" path="res://Scripts/mapa_2d.gd" id="1_2adt0"]
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="2_cfupu"]
-[ext_resource type="Texture2D" uid="uid://b5qynbjo7wydc" path="res://Imatges/Fons menu/OFF_SMALL2.png" id="3_2adt0"]
 [ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="3_3vjej"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="4_4egp3"]
 [ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="4_i63ma"]
 [ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="5_i63ma"]
 
-[sub_resource type="GDScript" id="GDScript_3vjej"]
-script/source = "extends Node
-
-
-
-
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Escenes/escena_2.tscn\")
-
-
-func _on_volum_pressed() -> void:
-	$Nau/AudioStreamPlayer.stop()
-	
-"
-
-[sub_resource type="GDScript" id="GDScript_q54v5"]
-
 [node name="Mapa 2D" type="Node2D"]
-script = SubResource("GDScript_3vjej")
+script = ExtResource("1_2adt0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.8, 1.8)
 script = ExtResource("2_cfupu")
 
-[node name="Volum" type="TextureButton" parent="Camera2D"]
-offset_left = -317.0
-offset_top = -177.0
-offset_right = -267.0
-offset_bottom = -127.0
-toggle_mode = true
-texture_normal = ExtResource("2_2adt0")
-texture_pressed = ExtResource("3_2adt0")
-script = SubResource("GDScript_q54v5")
-
-[node name="Fons" parent="." instance=ExtResource("3_3vjej")]
-
 [node name="Nau" parent="." instance=ExtResource("4_4egp3")]
 position = Vector2(-270, 0)
+
+[node name="Fons" parent="." instance=ExtResource("3_3vjej")]
 
 [node name="Enemics" type="Node2D" parent="."]
 position = Vector2(286, 0)
@@ -55,4 +27,6 @@ escena_enemic = ExtResource("5_i63ma")
 [node name="Timer" type="Timer" parent="Enemics"]
 autostart = true
 
-[connection signal="pressed" from="Camera2D/Volum" to="." method="_on_volum_pressed"]
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
