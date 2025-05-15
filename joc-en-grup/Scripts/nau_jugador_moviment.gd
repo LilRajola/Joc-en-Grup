@@ -18,12 +18,8 @@ func _process(delta: float) -> void:
 func rebre_bala():
 	$Salut.value -= 40
 	if $Salut.value <=  0:
-		pass
+		get_tree().change_scene_to_file("res://Escenes/GameOver.tscn")
 		
-func mort():
-	visible = false
-
-
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	$".".position.y = 0 
 	$Salut.value -= 20

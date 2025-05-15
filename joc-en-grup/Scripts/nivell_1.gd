@@ -1,10 +1,9 @@
 extends Node2D
 
 @onready var timer: Timer = $Timer
-const ENEMIC_DISPARA = preload("res://Escenes/enemic_area.tscn")
-const ENEMIC_NO_DISPARA = preload("res://Escenes/enemic_disparo.tscn")
-
-var torn_disparar = true  # Alternarem quin enemic apareix
+const ENEMIC_NO_DISPARA = preload("res://Escenes/enemic_area.tscn")
+const ENEMIC_DISPARA = preload("res://Escenes/enemic_disparo.tscn")
+@onready var nau = $Nau
 
 func _ready():
 	timer.wait_time = 2.0
@@ -13,15 +12,8 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 
 func _on_timer_timeout():
-	var enemic
-	if torn_disparar:
-		enemic = ENEMIC_DISPARA.instantiate()
-	else:
-		enemic = ENEMIC_NO_DISPARA.instantiate()
-	
-	torn_disparar = !torn_disparar  
-
-
-	var pos_x = randf_range(100, 700)
-	enemic.position = Vector2(pos_x, -50)
-	add_child(enemic)
+	var nou_enemic = ENEMIC_DISPARA.instantiate()
+	get_parent().add_child(nou_enemic)
+	nou_enemic.position.x = nau.position.x + randf_range(450,500)
+	nou_enemic.position.y = randf_range(-180, 180)
+	timer.start()

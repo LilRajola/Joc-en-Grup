@@ -1,6 +1,18 @@
 extends Control
-
+var ON := true
 
 func _on_restart_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenes/Nivell.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Menu.tscn")
+
+func _ready():
+	$Audio/AudioStreamPlayer.play()
 	
+func _on_audio_pressed() -> void:
+	ON = !ON 
+	if ON:
+		$Audio/AudioStreamPlayer.play()
+	else:
+		$Audio/AudioStreamPlayer.stop()
+
+func _on_audio_stream_player_finished() -> void:
+	$Audio/AudioStreamPlayer.play()
