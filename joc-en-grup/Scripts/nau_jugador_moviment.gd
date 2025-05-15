@@ -15,3 +15,5 @@ func _process(delta: float) -> void:
 		get_parent().add_child(shoot)
 		$AudioStreamPlayer.play()
 	move_and_slide()
+func mort():
+	visible = false

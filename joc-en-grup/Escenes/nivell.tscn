@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://busdpe08ilych"]
+[gd_scene load_steps=6 format=3 uid="uid://busdpe08ilych"]
+
+[ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="1_dqa4m"]
+[ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="1_p1qny"]
+[ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="2_xwtnn"]
+[ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="4_rg72j"]
+[ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="5_gd5go"]
 
 [node name="Nivell" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.8, 1.8)
+script = ExtResource("1_p1qny")
+
+[node name="Nau" parent="." instance=ExtResource("2_xwtnn")]
+position = Vector2(-270, 0)
+
+[node name="Fons" parent="." instance=ExtResource("1_dqa4m")]
+
+[node name="Enemics" type="Node2D" parent="."]
+position = Vector2(16, 0)
+script = ExtResource("4_rg72j")
+escena_enemic = ExtResource("5_gd5go")
+
+[node name="Timer" type="Timer" parent="Enemics"]
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]

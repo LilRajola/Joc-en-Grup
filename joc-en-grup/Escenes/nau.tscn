@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkhwa6tosu6hm"]
+[gd_scene load_steps=8 format=3 uid="uid://dkhwa6tosu6hm"]
 
 [ext_resource type="Script" uid="uid://buvopjkuiuum6" path="res://Scripts/nau_jugador_moviment.gd" id="1_5806m"]
 [ext_resource type="Texture2D" uid="uid://dnernhjmnbum0" path="res://Imatges/Naus i meteorits/PNG/playerShip1_blue.png" id="1_urhgp"]
 [ext_resource type="AudioStream" uid="uid://qlaelqvc7wyd" path="res://Audio/mixkit-short-laser-gun-shot-1670.wav" id="3_4fit1"]
+[ext_resource type="Script" uid="uid://bkg1m40w8k171" path="res://Scripts/salut.gd" id="4_w4cpf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5806m"]
 radius = 20.025
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fit1"]
+bg_color = Color(0.187176, 0.187176, 0.187176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4cpf"]
+bg_color = Color(0.298039, 0.631373, 0.156863, 1)
 
 [node name="Nau" type="CharacterBody2D"]
 script = ExtResource("1_5806m")
@@ -22,6 +29,15 @@ shape = SubResource("CircleShape2D_5806m")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4fit1")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_right = 194.0
-offset_bottom = 37.0
+[node name="Salut" type="ProgressBar" parent="."]
+offset_left = -31.0
+offset_top = 30.0
+offset_right = 32.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.0509804)
+theme_override_styles/background = SubResource("StyleBoxFlat_4fit1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_w4cpf")
+max_value = 200.0
+value = 200.0
+show_percentage = false
+script = ExtResource("4_w4cpf")
