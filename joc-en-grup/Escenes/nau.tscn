@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://buvopjkuiuum6" path="res://Scripts/nau_jugador_moviment.gd" id="1_5806m"]
 [ext_resource type="Texture2D" uid="uid://dnernhjmnbum0" path="res://Imatges/Naus i meteorits/PNG/playerShip1_blue.png" id="1_urhgp"]
 [ext_resource type="AudioStream" uid="uid://qlaelqvc7wyd" path="res://Audio/mixkit-short-laser-gun-shot-1670.wav" id="3_4fit1"]
-[ext_resource type="Script" path="res://Scripts/salut.gd" id="4_w4cpf"]
+[ext_resource type="Script" uid="uid://bkg1m40w8k171" path="res://Scripts/salut.gd" id="4_w4cpf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5806m"]
 radius = 20.025
@@ -23,6 +23,12 @@ rotation = 1.5708
 scale = Vector2(0.530667, 0.530667)
 texture = ExtResource("1_urhgp")
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Sprite2D"]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Sprite2D"]
+position = Vector2(0.210445, -0.210454)
+scale = Vector2(3.77791, 3.75689)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5806m")
 
@@ -41,3 +47,6 @@ max_value = 200.0
 value = 200.0
 show_percentage = false
 script = ExtResource("4_w4cpf")
+
+[connection signal="screen_entered" from="Sprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="Sprite2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
