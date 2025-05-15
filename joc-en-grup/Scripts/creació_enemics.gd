@@ -3,7 +3,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @export var escena_enemic: PackedScene
 var enemics_creats := 0
-var maxim_enemics := 15
+var maxim_enemics := 14
 
 func _ready() -> void:
 	timer.wait_time = 0.25

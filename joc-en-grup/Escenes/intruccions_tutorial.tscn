@@ -11,5 +11,5 @@ text = "Ei Mestre, benvingut a Galactics SL."
 script = ExtResource("1_gwcil")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 4.0
 autostart = true

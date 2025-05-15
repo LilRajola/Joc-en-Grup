@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://cj0ueub8rqsu"]
+
+[ext_resource type="Script" uid="uid://c4hvh43486lvw" path="res://Scripts/GameOver.gd" id="1_r64k0"]
+[ext_resource type="Texture2D" uid="uid://bbrjppslcdj23" path="res://Imatges/Fons menu/nebulawetstars.png" id="2_211lj"]
+[ext_resource type="Script" uid="uid://u8v2d04plybd" path="res://Scripts/Estrelles.gd" id="3_pofmf"]
+[ext_resource type="Texture2D" uid="uid://b7tgxfu7srjd8" path="res://Imatges/Fons menu/nebuladrystars.png" id="4_blxqe"]
+[ext_resource type="Script" uid="uid://cbf1kjh0we1n3" path="res://Scripts/SmallEstrelles.gd" id="5_n0yp6"]
+[ext_resource type="FontFile" uid="uid://dxpf8sgnud44c" path="res://Fonts/Miskan Oblique.otf" id="6_4xjhv"]
+[ext_resource type="Texture2D" uid="uid://mwuc4c1w63j4" path="res://Imatges/Fons menu/ON.png" id="7_x5i2g"]
+[ext_resource type="Texture2D" uid="uid://cnhvl11lgd4vt" path="res://Imatges/Fons menu/OFF_SMALL.png" id="8_2ix2x"]
+[ext_resource type="AudioStream" uid="uid://b7osv16hqq0s5" path="res://Audio/Cancion epica que usa TheGrefg _Victory_ [tvoh8bVTLUQ].mp3" id="9_r64k0"]
+
+[node name="Control" type="Node2D"]
+script = ExtResource("1_r64k0")
+
+[node name="Nebulawetstars" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324.5)
+scale = Vector2(0.281494, 0.158447)
+texture = ExtResource("2_211lj")
+script = ExtResource("3_pofmf")
+
+[node name="Nebuladrystars" type="Sprite2D" parent="."]
+position = Vector2(738.781, 375.916)
+scale = Vector2(0.502, 0.158)
+texture = ExtResource("4_blxqe")
+script = ExtResource("5_n0yp6")
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = -18.0
+offset_top = 63.0
+offset_right = 1149.0
+offset_bottom = 508.0
+theme_override_fonts/font = ExtResource("6_4xjhv")
+theme_override_font_sizes/font_size = 150
+text = "Ets tot un pilot!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Audio" type="TextureButton" parent="."]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 59.0
+offset_bottom = 59.0
+toggle_mode = true
+texture_normal = ExtResource("7_x5i2g")
+texture_pressed = ExtResource("8_2ix2x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("9_r64k0")
+
+[connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]
+[connection signal="finished" from="Audio/AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

@@ -10,13 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cnhvl11lgd4vt" path="res://Imatges/Fons menu/OFF_SMALL.png" id="8_bno7s"]
 [ext_resource type="AudioStream" uid="uid://s2gv6ny88e6x" path="res://Audio/brawl-stars-ost-lose-made-with-Voicemod.mp3" id="9_jrvvf"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="Node2D"]
 script = ExtResource("1_7nshl")
 
 [node name="Nebulawetstars" type="Sprite2D" parent="."]
@@ -32,24 +26,16 @@ texture = ExtResource("4_t3w6i")
 script = ExtResource("5_sygr3")
 
 [node name="GameOver" type="Label" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 445.0
+offset_left = 3.0
+offset_top = 116.0
+offset_right = 1156.0
+offset_bottom = 561.0
 theme_override_fonts/font = ExtResource("6_yhpji")
 theme_override_font_sizes/font_size = 150
 text = "Game Over!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Restart" type="Button" parent="."]
-layout_mode = 0
-offset_left = 425.0
-offset_top = 358.0
-offset_right = 740.0
-offset_bottom = 461.0
-theme_override_fonts/font = ExtResource("6_yhpji")
-theme_override_font_sizes/font_size = 40
-text = "Tornar a jugar"
+metadata/_edit_use_anchors_ = true
 
 [node name="Audio" type="TextureButton" parent="."]
 offset_left = 9.0
@@ -59,10 +45,10 @@ offset_bottom = 59.0
 toggle_mode = true
 texture_normal = ExtResource("7_qsuec")
 texture_pressed = ExtResource("8_bno7s")
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("9_jrvvf")
 
-[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]
 [connection signal="finished" from="Audio/AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
