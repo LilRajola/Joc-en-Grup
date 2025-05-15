@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://thqhtwfnqi1h"]
+[gd_scene load_steps=11 format=3 uid="uid://thqhtwfnqi1h"]
 
 [ext_resource type="Script" uid="uid://c4hvh43486lvw" path="res://Scripts/GameOver.gd" id="1_7nshl"]
 [ext_resource type="Texture2D" uid="uid://bbrjppslcdj23" path="res://Imatges/Fons menu/nebulawetstars.png" id="2_a7td8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7tgxfu7srjd8" path="res://Imatges/Fons menu/nebuladrystars.png" id="4_t3w6i"]
 [ext_resource type="Script" uid="uid://cbf1kjh0we1n3" path="res://Scripts/SmallEstrelles.gd" id="5_sygr3"]
 [ext_resource type="FontFile" uid="uid://dxpf8sgnud44c" path="res://Fonts/Miskan Oblique.otf" id="6_yhpji"]
+[ext_resource type="FontFile" uid="uid://db765nebstfct" path="res://Fonts/Miskan Oblique.ttf" id="7_bno7s"]
 [ext_resource type="Texture2D" uid="uid://mwuc4c1w63j4" path="res://Imatges/Fons menu/ON.png" id="7_qsuec"]
 [ext_resource type="Texture2D" uid="uid://cnhvl11lgd4vt" path="res://Imatges/Fons menu/OFF_SMALL.png" id="8_bno7s"]
 [ext_resource type="AudioStream" uid="uid://s2gv6ny88e6x" path="res://Audio/brawl-stars-ost-lose-made-with-Voicemod.mp3" id="9_jrvvf"]
@@ -26,16 +27,27 @@ texture = ExtResource("4_t3w6i")
 script = ExtResource("5_sygr3")
 
 [node name="GameOver" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 116.0
-offset_right = 1156.0
-offset_bottom = 561.0
+offset_left = -1.0
+offset_top = 60.0
+offset_right = 1152.0
+offset_bottom = 505.0
 theme_override_fonts/font = ExtResource("6_yhpji")
 theme_override_font_sizes/font_size = 150
 text = "Game Over!"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="GameOver"]
+offset_left = 380.0
+offset_top = 287.0
+offset_right = 1400.0
+offset_bottom = 657.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("7_bno7s")
+theme_override_font_sizes/font_size = 100
+text = "(LAURA)"
 
 [node name="Audio" type="TextureButton" parent="."]
 offset_left = 9.0
