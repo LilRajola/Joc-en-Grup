@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8d2twyd43tw1"]
+[gd_scene load_steps=11 format=3 uid="uid://8d2twyd43tw1"]
 
 [ext_resource type="Texture2D" uid="uid://codhfyktmu8t6" path="res://Imatges/Fons general/1.png" id="1_wv0kd"]
 [ext_resource type="Texture2D" uid="uid://bc3v8xh4tc168" path="res://Imatges/Fons general/2.png" id="2_5iv1d"]
@@ -10,9 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bgvm2hlyrr1t6" path="res://Imatges/Fons general/8.png" id="8_3gqsc"]
 [ext_resource type="Texture2D" uid="uid://dmm2p6dqvlhon" path="res://Imatges/Fons general/9.png" id="9_ay71q"]
 [ext_resource type="Texture2D" uid="uid://c80d2to03gafo" path="res://Imatges/Fons general/10.png" id="10_ptc0u"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv0kd"]
-size = Vector2(242944, 1167)
 
 [node name="Fons" type="Node2D"]
 
@@ -87,19 +84,3 @@ motion_mirroring = Vector2(5760, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
 texture = ExtResource("10_ptc0u")
-
-[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/Parallax2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Parallax2D/StaticBody2D"]
-position = Vector2(121471, 763)
-scale = Vector2(100, 1)
-shape = SubResource("RectangleShape2D_wv0kd")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="ParallaxBackground/Parallax2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Parallax2D/StaticBody2D2"]
-position = Vector2(122083, -763)
-scale = Vector2(100, 1)
-shape = SubResource("RectangleShape2D_wv0kd")

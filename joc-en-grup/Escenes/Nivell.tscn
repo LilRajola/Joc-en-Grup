@@ -1,17 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://btbxthta24aon"]
+[gd_scene load_steps=4 format=3 uid="uid://btbxthta24aon"]
 
 [ext_resource type="Script" uid="uid://dtwtm3pi42aee" path="res://Escenes/nivell_1.gd" id="1_cbn6x"]
 [ext_resource type="Script" uid="uid://dm2oe77p863ur" path="res://Scripts/camera_2d.gd" id="1_nqihh"]
 [ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="2_cbn6x"]
-[ext_resource type="PackedScene" uid="uid://8d2twyd43tw1" path="res://Escenes/Fons General.tscn" id="3_f2lev"]
 
 [node name="Nivell" type="Node2D"]
 script = ExtResource("1_cbn6x")
 
 [node name="Nau" parent="." instance=ExtResource("2_cbn6x")]
 position = Vector2(-270, 0)
-
-[node name="Fons" parent="." instance=ExtResource("3_f2lev")]
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
