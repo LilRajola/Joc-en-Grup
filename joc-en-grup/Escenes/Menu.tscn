@@ -24,13 +24,22 @@ scale = Vector2(0.281494, 0.158447)
 texture = ExtResource("4_fl60i")
 script = ExtResource("4_eintn")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 476.0
-offset_top = 207.0
-offset_right = 672.0
-offset_bottom = 284.0
+[node name="Play" type="Button" parent="."]
+offset_left = 486.0
+offset_top = 249.0
+offset_right = 679.0
+offset_bottom = 326.0
 theme_override_font_sizes/font_size = 50
 text = "Play"
+
+[node name="Tutorial" type="Button" parent="."]
+offset_left = 522.0
+offset_top = 360.0
+offset_right = 632.0
+offset_bottom = 411.0
+theme_override_font_sizes/font_size = 25
+text = "Tutorial
+"
 
 [node name="Audio" type="TextureButton" parent="."]
 offset_left = 9.0
@@ -44,6 +53,7 @@ texture_pressed = ExtResource("6_fl60i")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("6_1l38a")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]
 [connection signal="finished" from="Audio/AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

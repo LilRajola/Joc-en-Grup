@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 var velocitat  := 200
 const bala = preload("res://Escenes/bala_area.tscn")
-
 func _process(delta: float) -> void:
 	var direcció_y = Input.get_axis("Pujar","Baixar")
 	velocity.y = direcció_y * velocitat
@@ -15,6 +14,4 @@ func _process(delta: float) -> void:
 		shoot.position = position + Vector2(50,0)  # Fa que la bala surti del jugador
 		get_parent().add_child(shoot)
 		$AudioStreamPlayer.play()
-		
 	move_and_slide()
-	
