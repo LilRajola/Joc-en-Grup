@@ -15,9 +15,15 @@ func _process(delta: float) -> void:
 		get_parent().add_child(shoot)
 		$AudioStreamPlayer.play()
 	move_and_slide()
+func rebre_bala():
+	$Salut.value -= 40
+	if $Salut.value <=  0:
+		pass
+		
 func mort():
 	visible = false
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
-	pass
+	$".".position.y = 0 
+	$Salut.value -= 20
