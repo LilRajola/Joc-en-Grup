@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://thqhtwfnqi1h"]
+
+[ext_resource type="Script" uid="uid://c4hvh43486lvw" path="res://Scripts/GameOver.gd" id="1_7nshl"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7nshl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="GameOver" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
