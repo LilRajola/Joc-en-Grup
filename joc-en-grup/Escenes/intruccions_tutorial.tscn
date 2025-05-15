@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn3iiuyoxabm2"]
+
+[ext_resource type="Script" uid="uid://b13u5t4gqh26y" path="res://Scripts/intruccions_tutorial.gd" id="1_gwcil"]
+
+[node name="Intruccions_tutorial" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Ei Mestre, benvingut a Galactics SL."
+script = ExtResource("1_gwcil")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true

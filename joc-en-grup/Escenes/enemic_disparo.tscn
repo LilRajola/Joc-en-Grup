@@ -23,5 +23,3 @@ shape = SubResource("CapsuleShape2D_6fke8")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="Camera2D" type="Camera2D" parent="."]

@@ -5,7 +5,7 @@ func _ready():
 	#$Audio/AudioStreamPlayer.play()
 	pass
 func _on_tutorial_pressed() -> void:
-	get_tree().change_scene_to_file("res://Escenes/mapa_2d.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Tutorial.tscn")
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://Escenes/nivell.tscn")
 func _on_audio_pressed():
