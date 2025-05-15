@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqr44i6wfj8ld"]
+
+[ext_resource type="Script" uid="uid://cnxmfntkbxee8" path="res://Scripts/nau_disparo.gd" id="1_ges2h"]
+[ext_resource type="Texture2D" uid="uid://dt0l850tx8bvf" path="res://Imatges/Naus i meteorits/PNG/Sprites/Ships/spaceShips_006.png" id="2_0n3ut"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6fke8"]
+radius = 23.0
+height = 78.0
+
+[node name="Enemic_disparo" type="Area2D"]
+script = ExtResource("1_ges2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0n3ut")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_6fke8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxpr0qlyi7qj3"]
 
-[ext_resource type="Texture2D" uid="uid://dajbgur3ltixs" path="res://Imatges/Naus i meteorits/PNG/Sprites/Ships/spaceShips_001.png" id="1_86qmw"]
 [ext_resource type="Script" uid="uid://ch4sxm0u7ux4p" path="res://Scripts/enemic.gd" id="1_oikqx"]
+[ext_resource type="Texture2D" uid="uid://deapc2lfeeird" path="res://Imatges/Naus i meteorits/PNG/Sprites/Ships/spaceShips_003.png" id="2_oikqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oikqx"]
 size = Vector2(20, 26)
@@ -25,4 +25,4 @@ curve = SubResource("Curve2D_a2166")
 
 [node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_86qmw")
+texture = ExtResource("2_oikqx")
