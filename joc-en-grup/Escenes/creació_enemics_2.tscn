@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkvg7fpflkaj1"]
+
+[ext_resource type="Script" uid="uid://mudavsks8s6y" path="res://Scripts/creació_enemics.gd" id="1_otitr"]
+[ext_resource type="PackedScene" uid="uid://cxpr0qlyi7qj3" path="res://Escenes/enemic_area.tscn" id="2_sw4yi"]
+[ext_resource type="PackedScene" uid="uid://dkhwa6tosu6hm" path="res://Escenes/nau.tscn" id="3_sw4yi"]
+
+[node name="Creació_enemics" type="Node2D"]
+script = ExtResource("1_otitr")
+escena_enemic = ExtResource("2_sw4yi")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Nau" parent="." instance=ExtResource("3_sw4yi")]
+position = Vector2(0, -1057)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

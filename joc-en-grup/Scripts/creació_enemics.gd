@@ -20,7 +20,7 @@ func _on_timer_timeout() -> void:
 	if enemics_creats < maxim_enemics:
 		var nou_enemic = escena_enemic.instantiate()
 		add_child(nou_enemic)
-		nou_enemic.position = Vector2($"../Nau".position.x + 300, -165)
+		nou_enemic.position = Vector2($"Nau".position.x + 150, -170)
 		enemics_creats += 1
 	else:
 		timer.stop()
